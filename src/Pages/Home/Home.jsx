@@ -1,4 +1,3 @@
-import React from "react";
 import Header from "../Shared/Header";
 import Navbar from "../Shared/Navbar";
 import LeftNav from "../Shared/LeftNav/LeftNav";
@@ -12,7 +11,7 @@ const Home = () => {
       <BreakingNews></BreakingNews>
       <Navbar></Navbar>
       <div className="grid lg:grid-cols-4 gap-6 mt-10">
-        <div className="border">
+        <div className="">
           <LeftNav></LeftNav>
         </div>
         <div className="lg:col-span-2 border">
