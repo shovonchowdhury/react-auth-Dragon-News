@@ -9,6 +9,9 @@ export default {
       fontFamily:{
         poppins: "'Poppins', sans-serif",
         dragon: " 'UnifrakturCook', cursive"
+      },
+      backgroundImage:{
+        rightNavImg: 'url(/src/assets/bg1.png)'
       }
     },
   },
