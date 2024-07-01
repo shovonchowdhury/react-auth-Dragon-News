@@ -19,10 +19,12 @@ const Home = () => {
           <LeftNav></LeftNav>
         </div>
         <div className="lg:col-span-2 ">
-          <p className="text-xl font-semibold">Dragon News Home</p>
-          {news.map((anews) => (
-            <NewsCard key={anews.id} news={anews}></NewsCard>
-          ))}
+          <p className="text-xl font-semibold mb-5">Dragon News Home</p>
+          <div className="space-y-5">
+            {news.map((anews) => (
+              <NewsCard key={anews.id} news={anews}></NewsCard>
+            ))}
+          </div>
         </div>
         <div className="">
           <Rightnav></Rightnav>
