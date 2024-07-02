@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { FaGoogle, FaGithub } from "react-icons/fa";
 import { SiFacebook } from "react-icons/si";
@@ -8,13 +8,26 @@ import img1 from "../../../assets/qZone1.png";
 import img2 from "../../../assets/qZone2.png";
 import img3 from "../../../assets/qZone3.png";
 import bgImg from "../../../assets/bg1.png";
+import { AuthContext } from "../../../Provider/AuthProvider";
 
 const Rightnav = () => {
+  const { loginWithGoogle } = useContext(AuthContext);
+
+  const handleGoogleLogin = () => {
+    loginWithGoogle()
+      .then((res) => {
+        console.log("Google log in successful", res.user);
+      })
+      .catch((error) => console.log(error.message));
+  };
   return (
     <div className="space-y-8">
       <div className="space-y-3">
         <h2 className="text-xl font-bold">Login With</h2>
-        <button className="btn bg-white border w-full border-2">
+        <button
+          onClick={handleGoogleLogin}
+          className="btn bg-white border w-full border-2"
+        >
           <FaGoogle /> Login With Google
         </button>
         <button className="btn bg-white border w-full border-2">

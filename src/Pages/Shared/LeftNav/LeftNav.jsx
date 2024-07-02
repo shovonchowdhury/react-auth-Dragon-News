@@ -35,7 +35,7 @@ const LeftNav = () => {
         <div className="space-y-5">
           {navNews.slice(0, 4).map((news) => (
             <div key={news.id} className="hover:bg-[#E7E7E7] p-3">
-              <Link className="space-y-5">
+              <Link className="space-y-5" to={`/news/${news._id}`}>
                 <img className="rounded-md" src={news.image_url} alt="" />
                 <h2 className="font-semibold text-xl">{news.title}</h2>
                 <div className="flex gap-7">

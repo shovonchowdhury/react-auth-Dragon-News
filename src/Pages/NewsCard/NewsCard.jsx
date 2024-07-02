@@ -45,7 +45,7 @@ const NewsCard = ({ news }) => {
         {details.length > 200 ? (
           <p className="pb-5">
             {details.slice(0, 200)}...
-            <Link to={`/news/${_id}}`} className="text-[#FF8C47]">
+            <Link to={`/news/${_id}`} className="text-[#FF8C47]">
               Read More
             </Link>
           </p>
